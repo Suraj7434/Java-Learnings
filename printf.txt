@@ -1,0 +1,22 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class ShoppingCart {
+    public static void main(String[] args){
+        String name = "Suraj";
+        int age = 22;
+        double height = 5.90;
+        boolean isEmployed = true;
+        int salary = 1200000;
+        double a = -12.50;
+        System.out.printf("Hello %s\n", name);
+        System.out.printf("%s is %d years old\n",name ,age);
+        System.out.printf("%s is %.2f feet long\n",name ,height);
+        System.out.printf("%s employment status is %b\n",name ,isEmployed);
+        System.out.printf("His salary is %,d\n", salary);
+        System.out.printf("% .2f", a);
+
+        // width padding
+
+    }
+}

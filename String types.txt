@@ -1,0 +1,44 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class ShoppingCart {
+    public static void main(String[] args){
+
+        String name = "  Suraj Phand  ";
+        System.out.println(name + "\n");
+
+        name = name.trim();
+        System.out.println(name);
+
+        int length = name.length();
+        System.out.println(length);
+
+        char letter = name.charAt(3);
+        System.out.println(letter);
+
+        int index = name.indexOf("S");
+        System.out.println(index);
+
+        int lastIndex = name.lastIndexOf("a");
+        System.out.println(lastIndex);
+
+        name = name.toUpperCase();
+        System.out.println(name);
+
+        name = name.toLowerCase();
+        System.out.println(name);
+
+        name = name.replace(" ", " Namdeo ");
+        System.out.println(name);
+
+        boolean isEmpty = name.isEmpty();
+        System.out.println("is your name Empty?: " + isEmpty);
+
+        boolean contains = name.contains("suraj");
+        System.out.println(contains);
+
+        boolean equals = name.equalsIgnoreCase("Suraj Namdeo Phand");
+        System.out.println(equals);
+
+    }
+}

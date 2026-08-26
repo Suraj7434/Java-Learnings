@@ -1,0 +1,30 @@
+import java.util.Random;
+
+public class ShoppingCart {
+    public static void main(String[] args){
+    int numb;
+    int numb2;
+    int numb3;
+    int numb4;
+    int numb5;
+    int numb6;
+
+
+
+    Random number = new Random();
+    numb = number.nextInt(1, 7);
+    numb2 = number.nextInt(1, 7);
+    numb3 = number.nextInt(1, 7);
+    numb4 = number.nextInt(1, 7);
+    numb5 = number.nextInt(1, 7);
+    numb6 = number.nextInt(1, 7);
+
+        System.out.print(numb);
+        System.out.print(numb2);
+        System.out.print(numb3);
+        System.out.print(numb4);
+        System.out.print(numb5);
+        System.out.print(numb6);
+
+    }
+}

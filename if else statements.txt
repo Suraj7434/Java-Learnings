@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+public class ShoppingCart {
+    public static void main(String[] args){
+        Scanner scanner =  new Scanner(System.in);
+
+        int age;
+        String name;
+        boolean isStudent;
+
+        System.out.print("Enter your name: ");
+        name = scanner.nextLine();
+
+        System.out.print("Enter your age: ");
+        age = scanner.nextInt();
+
+        System.out.print("Are you student? (True/False): ");
+        isStudent = scanner.nextBoolean();
+
+        // name
+
+        if(name.isEmpty()){
+            System.out.println("Oops! you didnt enter a name");
+        }
+        else{
+            System.out.println("Helloo " + name + "!");
+        }
+
+        // age
+
+        if(age > 65){
+            System.out.println("You are an Elder");
+        }
+        else if( age > 18){
+            System.out.println("You are an Adult");
+        }
+        else if (age < 0) {
+            System.out.println("Enter appropriate age");
+        }
+        else{
+            System.out.println("You are an Child");
+        }
+
+        //student
+
+        if(isStudent){
+            System.out.println("You are eligible for Scholorship! ");
+        }
+        else{
+            System.out.println("You are Not eligible for Scholorship! ");
+        }
+
+        scanner.close();
+    }
+}

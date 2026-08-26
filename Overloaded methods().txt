@@ -1,0 +1,23 @@
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        String pizza = bakePizza("Flat base", "Mozerella", "Onion");
+        System.out.println(pizza);
+
+    }
+    static String bakePizza(String bread){
+        return bread + " " + "pizza";
+    }
+    static String bakePizza(String bread, String cheese){
+        return cheese + " " + bread + " Pizza";
+    }
+    static String bakePizza(String bread, String cheese, String topping){
+        return cheese + " " + bread + " " + topping + " Pizza";
+
+    }
+
+}
+

@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class ShoppingCart {
+    public static void main(String[] args){
+        boolean isStudent = true;
+        boolean isSenior = true;
+                ;
+        double price = 300.00;
+
+        if(isStudent){
+            if(isSenior){
+                System.out.println("You get 10% of student discount!");
+                System.out.println("Also as a senior, a additional discount of 20%");
+                price *= 0.7;
+                System.out.println("Ticket price is: " + price);
+            }
+            else{
+                System.out.println("You get 10% of student discount!");
+                price *= 0.9;
+                System.out.println("Ticket price is: " + price);
+            }
+        }
+        else{
+                if(isSenior){
+                    System.out.println("You get a 20% discount!");
+                }
+                else{
+                    System.out.println("Ticket price is: " + price);
+                }
+        }
+
+    }
+}

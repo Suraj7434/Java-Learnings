@@ -1,0 +1,75 @@
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
+public class Main {
+
+    static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+
+        int choice;
+        double balance = 0;
+        boolean isRunning = true;
+
+    while(isRunning) {
+        System.out.println("\nWelcome to AXIS BANK");
+        System.out.println("1. Balance");
+        System.out.println("2. Deposit");
+        System.out.println("3. Withdraw");
+        System.out.println("4. Exit");
+
+        System.out.print("Enter Your choice(1-4): ");
+        choice = scanner.nextInt();
+
+        switch (choice) {
+            case 1 -> checkBalance(balance);
+            case 2 -> balance += deposit(balance);
+            case 3 -> balance -= withdraw(balance);
+            case 4 -> isRunning = false;
+        }
+    }
+
+        System.out.println("Thank you have a nice day!");
+    }
+
+    static void checkBalance(double balance){
+        System.out.println("$" + balance);
+    }
+
+    static double deposit(double balance){
+        double amount;
+        System.out.print("Enter amount to deposit: ");
+        amount = scanner.nextDouble();
+        if(amount < 0){
+            System.out.println("Amount cannot be negative!");
+            return 0;
+        }
+        else{
+            balance += amount;
+            System.out.println("Available balance: " + balance);
+            return amount;
+        }
+    }
+
+    static double withdraw(double balance){
+        double amount;
+        System.out.print("Enter amount to withdraw: ");
+        amount = scanner.nextDouble();
+        if(amount > balance){
+            System.out.println("Insufficent funds!");
+            return 0;
+        }
+        else if(amount < 0){
+            System.out.println("Amount cannot be negative!");
+            return 0;
+        }
+        else{
+            balance -= amount;
+            System.out.println("Available balance: " + balance);
+            return amount;
+
+        }
+    }
+
+}
+

@@ -1,0 +1,52 @@
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args){
+        System.out.println("I like Pizza!");
+        System.out.print("Its really good!\n");
+        System.out.print("buy me one!\n");
+        System.out.println("Pleaseee!");
+
+        double price = 12.99;
+        char currency = '$';
+        boolean isStudent = false;
+        String intro = "I am Suraj";
+
+        System.out.println(price);
+        System.out.println(currency);
+        System.out.println(isStudent);
+        System.out.println(intro);
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+
+        System.out.println("Enter your age: ");
+        int age = scanner.nextInt();
+
+        System.out.println("Enter your cgpa: ");
+        double cgpa = scanner.nextDouble();
+
+        System.out.println("Hello " + name);
+        System.out.println("Your " + age + " Years old");
+        System.out.println("Your CGPA is " + cgpa);
+
+        double width ;
+        double height ;
+        double area ;
+
+        Scanner scanners = new Scanner(System.in);
+
+        System.out.println("Enter the width: ");
+        width = scanners.nextDouble();
+
+        System.out.println("Enter your height: ");
+        height = scanners.nextDouble();
+
+        area = width * height;
+        System.out.println("Area of rectange is " + area);
+        scanners.close();
+    }
+}

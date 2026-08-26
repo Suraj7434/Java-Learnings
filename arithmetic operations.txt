@@ -1,0 +1,39 @@
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
+public class MadLibsGame {
+    // PEMDAS rule
+    public static void main (String[] args) {
+        double x = 10;
+        double y = 2;
+        double z;
+
+        z = x + y;
+        System.out.println(z);
+        z = x - y;
+        System.out.println(z);
+        z = x * y;
+        System.out.println(z);
+        z = x / y;
+        System.out.println(z);
+        z = x % y;
+        System.out.println(z);
+
+        x += y;
+        System.out.println(x);
+        x -= y;
+        System.out.println(x);
+        x *= y;
+        System.out.println(x);
+        x /= y;
+        System.out.println(x);
+        x %= y;
+        System.out.println(x);
+
+
+
+
+
+
+    }
+}

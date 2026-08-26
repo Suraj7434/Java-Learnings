@@ -1,0 +1,23 @@
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
+
+public class ShoppingCart {
+    public static void main(String[] args){
+
+        String email;
+        String username;
+        String domain;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your EMAIL: ");
+        email = scanner.nextLine();
+
+        username = email.substring(0, email.indexOf("@"));
+        System.out.printf("Hello %s!\n", username);
+
+        domain = email.substring(email.indexOf("@") + 1);
+        System.out.printf("%s is your mail domain\n", domain);
+    }
+}

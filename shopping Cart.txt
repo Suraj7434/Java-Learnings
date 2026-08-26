@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class ShoppingCart {
+    public static void main(String[] args){
+        Scanner scanner =  new Scanner(System.in);
+
+        String item;
+        int quantity;
+        double price;
+        char currency = '$';
+        double total;
+
+        System.out.print("What you would like to buy? : ");
+        item = scanner.nextLine();
+
+        System.out.print("What is its price? : ");
+        price = scanner.nextDouble();
+
+        System.out.print("How much you would like to buy : ");
+        quantity = scanner.nextInt();
+
+        total = quantity * price;
+
+        System.out.println("You have successfully purchased " + quantity + " " + item);
+        System.out.println("That would cost you " + currency + total);
+    }
+}

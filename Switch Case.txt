@@ -1,0 +1,50 @@
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
+
+public class ShoppingCart {
+    public static void main(String[] args){
+
+//        Scanner scanner = new Scanner(System.in);
+//
+//        int choice = 121;
+//
+//        String evenodd = (choice >= 18) ? "Adult" : "Child";
+//        System.out.println(evenodd);
+
+
+        String day;
+        String day2;
+
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Please enter a day: ");
+        day = scanner.nextLine();
+
+        switch (day){
+            case "Monday" -> System.out.println("Its a weekDay");
+            case "Tuesday" -> System.out.println("Its a weekDay");
+            case "Wednesday" -> System.out.println("Its a weekDay");
+            case "Thursday" -> System.out.println("Its a weekDay");
+            case "Friday" -> System.out.println("Its a weekDay");
+            case "Saturday" -> System.out.println("Yaaa! Its a weekend");
+            case "Sunday" -> System.out.println("Yaaa! Its a weekend");
+            default -> System.out.printf("%s is not a day!", day);
+
+        }
+
+        // second method
+        System.out.println("\nPlease enter a day:");
+        day2 = scanner.nextLine();
+
+        switch (day2){
+            default -> System.out.printf("%s is not a day!");
+            case "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"
+                -> System.out.println("Its a Week Day");
+            case "Saturday", "Sunday"
+                -> System.out.println("Yeahhhhh!!! its a weekend");
+
+        }
+    }
+}

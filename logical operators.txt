@@ -1,0 +1,34 @@
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
+
+public class ShoppingCart {
+    public static void main(String[] args){
+
+        int age;
+        boolean isStudent = true;
+        boolean isSenior = false;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your age: ");
+        age = scanner.nextInt();
+
+        if(age > 0 && age < 18){
+            System.out.println("Opps! You are not eligible");
+        }
+        else if(age > 18 && age < 100) {
+            System.out.println("You are eligible for this course!");
+            if (isSenior || !isStudent) {
+
+                System.out.println("You get discount on this course!");
+            }
+        }
+        else{
+            System.out.println("Invalid Age!");
+        }
+
+
+
+    }
+}

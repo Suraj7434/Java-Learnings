@@ -1,0 +1,35 @@
+******************Main.java******************************
+import java.io.CharArrayReader;
+public class Main {
+
+        public static void main(String[] args) {
+
+            Caar[] cars = {new Caar("verna", "Red"),
+                           new Caar("City", "blue"),
+                           new Caar("Baleno", "Red")};
+
+            for(Caar car : cars){
+                car.drive();
+            }
+        }
+    }
+
+
+
+************************Caar.java********************************
+public class Caar {
+
+    String name;
+    String color;
+
+    Caar(String name, String color){
+        this.name = name;
+        this.color = color;
+    }
+
+    void drive(){
+        System.out.println("you drive a " + color + " " + name);
+    }
+}
+
+

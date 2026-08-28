@@ -1,0 +1,35 @@
+******************Main.java******************************
+import java.io.CharArrayReader;
+public class Main {
+
+        public static void main(String[] args) {
+
+            Student student1 = new Student("Suraj", 22, 6.41);
+
+
+            System.out.println(student1.name);
+            System.out.println(student1.age);
+            System.out.println(student1.gpa);
+            student1.study();
+
+        }
+    }
+
+************************Student.java********************************
+public class Student {
+    String name;
+    int age;
+    double gpa;
+
+    Student(String name, int age, double gpa) {
+        this.name = name;
+        this.age = age;
+        this.gpa = gpa;
+    }
+
+    void study(){
+        System.out.println(this.name + " is studying...");
+    }
+
+}
+

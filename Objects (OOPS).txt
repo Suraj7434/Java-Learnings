@@ -1,0 +1,48 @@
+****************Main.java**********************
+
+import java.io.CharArrayReader;
+public class Main {
+
+        public static void main(String[] args) {
+
+            Car car = new Car();
+
+            car.drive();
+            car.brake();
+
+
+        }
+    }
+
+****************Car.java**********************
+
+public class Car {
+
+    String name = "Verna";
+    String model = "1.4 VtVx";
+    String fuelType = "Petrol";
+    int manufacture = 2018;
+    Double price = 1200000.0;
+    boolean isRunning = false;
+
+    void start(){
+        isRunning = true;
+        System.out.println("Car is Running...");
+    }
+
+    void stop(){
+        isRunning = false;
+        System.out.println("Car is at rest...");
+    }
+
+    void drive(){
+        System.out.println("You drive the " + name);
+    }
+
+    void brake(){
+        System.out.println("You brake the " + name);
+    }
+
+}
+
+

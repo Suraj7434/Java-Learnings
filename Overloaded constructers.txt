@@ -1,0 +1,72 @@
+****************Main.java**********************
+
+import java.io.CharArrayReader;
+public class Main {
+
+        public static void main(String[] args) {
+
+            User user = new User();
+            User user2 = new User("Suraj");
+            User user3 = new User("Vaishnavi", "vaishnavi@gmail.com");
+            User user4 = new User("Shailja", "Shailja@gmail.com", 54);
+
+            System.out.println(user.username);
+            System.out.println(user.email);
+            System.out.println(user.age);
+            System.out.println();
+
+            System.out.println(user2.username);
+            System.out.println(user2.email);
+            System.out.println(user2.age);
+            System.out.println();
+
+            System.out.println(user3.username);
+            System.out.println(user3.email);
+            System.out.println(user3.age);
+            System.out.println();
+
+            System.out.println(user4.username);
+            System.out.println(user4.email);
+            System.out.println(user4.age);
+            System.out.println();
+
+
+        }
+    }
+
+
+****************User.java**********************
+
+public class User {
+
+    String username;
+    String email;
+    int age;
+
+    User(){
+        this.username = "Guest";
+        this.email = "Not provided";
+        this.age = 0;
+    }
+
+    User(String name){
+        this.username = name;
+        this.email = "Not provided";
+        this.age = 0;
+    }
+
+    User(String name, String email){
+        this.username = name;
+        this.email =  email;
+        this.age = 0;
+    }
+
+    User(String name, String email, int age){
+        this.username = name;
+        this.email = email;
+        this.age = age;
+    }
+}
+
+
+

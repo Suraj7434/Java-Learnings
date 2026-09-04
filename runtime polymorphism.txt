@@ -1,0 +1,54 @@
+main.java*****************************************
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Animal animal;
+        int n;
+        Scanner scanner = new Scanner(System.in);
+
+        do {
+            System.out.print("Enter the animal (1: Dog 2: Cat): ");
+            n = scanner.nextInt();
+
+            if (n == 1) {
+                animal = new Dog();
+                animal.speak();
+            } else if (n == 2) {
+                animal = new Cat();
+                animal.speak();
+            } else {
+                System.out.println("Invalid Input");
+            }
+        }while (n != 1 && n != 2);
+
+
+        }
+    }
+
+animal.java*****************************************
+
+public abstract class Animal {
+
+    abstract void speak();
+}
+
+dog.java********************************************
+
+public class Dog extends Animal{
+
+    void speak(){
+        System.out.println("Dog goes *woof*");
+    }
+}
+
+cat.java********************************************
+
+public class Cat extends Animal{
+
+    void speak(){
+        System.out.println("Cat goes *meow*");
+    }
+}

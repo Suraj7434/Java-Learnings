@@ -1,0 +1,61 @@
+main.java***************************************************
+
+import org.w3c.dom.css.Rect;
+
+import java.io.CharArrayReader;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Car car = new Car();
+        Bike bike = new Bike();
+        Boat boat = new Boat();
+
+        Vehicle[] vehicles = {car, bike, boat};
+
+        for(Vehicle vehicle : vehicles){
+            vehicle.go();
+        }
+
+        }
+    }
+
+vehicle.java***********************************************
+
+public abstract class Vehicle {
+
+    abstract void go();
+}
+
+
+bike.java**************************************************
+
+public class Bike extends Vehicle{
+
+    @Override
+    void go() {
+        System.out.println("You ride a Bike");
+    }
+}
+
+
+car.java***************************************************
+
+
+public class Car extends Vehicle{
+
+    void go(){
+        System.out.println("You drive a Car");
+    }
+
+}
+
+boat.java**************************************************
+
+public class Boat extends Vehicle{
+
+    void go(){
+        System.out.println("You drive a Boat");
+    }
+}
+

@@ -1,0 +1,89 @@
+main.java*********************************************
+
+import org.w3c.dom.css.Rect;
+
+import java.io.CharArrayReader;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Circle circle = new Circle(5);
+        System.out.println(circle.area());
+
+        Triangle triangle = new Triangle(4,6);
+        System.out.println(triangle.area());
+
+        Rectangle rectangle = new Rectangle(6,7);
+        System.out.println(rectangle.area());
+
+
+        }
+    }
+
+shape.java(abstract class)*****************************
+
+public abstract class Shape {
+
+    abstract double area();
+
+    void display(){
+        System.out.println("This is a shape");
+    }
+
+
+}
+
+circle.java*******************************************
+
+public class Circle extends Shape{
+
+
+    double radius;
+
+    Circle(double radius){
+        this.radius = radius;
+    }
+
+    @Override
+    double area() {
+        return Math.PI * radius * radius ;
+    }
+}
+
+triangle.java*****************************************
+
+public class Triangle extends Shape{
+
+
+    double base;
+    double height;
+
+    Triangle(double base, double height){
+
+        this.base = base;
+        this.height = height;
+    }
+
+    @Override
+    double area(){
+        return 0.5 * base * height;
+    }
+}
+
+rectangle.java*****************************************
+
+public class Rectangle extends Shape{
+
+    double length;
+    double height;
+
+    Rectangle(double length, double height){
+        this.height = height;
+        this.length = length;
+    }
+
+    double area(){
+        return length * height;
+    }
+}
+

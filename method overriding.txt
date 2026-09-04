@@ -1,0 +1,80 @@
+Main.java************************************************
+
+import java.io.CharArrayReader;
+
+public class Main {
+    public static void main(String[] args) {
+
+            Stud student = new Stud("Vaishnavi", "Phand", 8.12);
+            student.showGpa();
+            student.learning();
+            System.out.println();
+
+            emp employee = new emp("Namdeo Phand", "Phand", 120000);
+            employee.showSalary();
+            employee.learning();
+        }
+    }
+
+
+
+Person.java(parent class)*********************************
+
+public class Person {
+
+    String first;
+    String last;
+
+    Person(String first, String last){
+        this.first = first;
+        this.last = last;
+    }
+
+    void showName(){
+        System.out.println(this.first + " " + this.last);
+    }
+
+    void learning(){
+        System.out.println("i am learning");
+    }
+}
+
+
+Stud.java(child class)************************************
+
+public class Stud extends Person{
+
+    double gpa;
+
+    Stud(String first, String last, double gpa){
+        super(first, last);
+        this.gpa = gpa;
+    }
+
+    void showGpa(){
+        System.out.println(this.first + "'s GPA is: " + gpa);
+    }
+}
+
+
+emp.java(child class)*************************************
+
+public class emp extends Person{
+
+    int salary;
+
+    emp(String first, String last, int salary){
+        super(first, last);
+        this.salary = salary;
+    }
+
+    void showSalary(){
+        System.out.println(this.first + "'s salary is: " + salary);
+    }
+
+    @Override
+    void learning(){
+        System.out.println("I am a employee");
+    }
+}
+
